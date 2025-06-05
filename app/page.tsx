@@ -1,103 +1,169 @@
-import Image from "next/image";
+import Link from "next/link"
+import { ArrowRight, BookOpen, MapPin, Phone } from "lucide-react"
+import HeroSlider from "@/components/hero-slider"
+import CourseCard from "@/components/course-card"
+import GalleryPreview from "@/components/gallery-preview"
+import MapLocation from "@/components/map-location"
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="flex min-h-screen flex-col">
+      {/* Hero Section */}
+      <section className="relative">
+        <HeroSlider />
+        <div className="absolute inset-0 flex items-center justify-center flex-col bg-black/40 text-white px-4">
+          <h1 className="text-4xl md:text-6xl font-bold text-center mb-4">Mother Teresa College of Nursing</h1>
+          <p className="text-xl md:text-2xl text-center max-w-3xl mb-8">
+            Shaping compassionate healthcare professionals for tomorrow
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link
+              href="/courses"
+              className="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-md font-medium flex items-center gap-2 transition-colors"
+            >
+              Explore Courses <ArrowRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/contact"
+              className="bg-white hover:bg-gray-100 text-rose-600 px-6 py-3 rounded-md font-medium flex items-center gap-2 transition-colors"
+            >
+              Contact Us <Phone className="h-4 w-4" />
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </section>
+
+      {/* About Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="flex flex-col md:flex-row gap-12 items-center">
+            <div className="md:w-1/2">
+              <h2 className="text-3xl font-bold mb-6 text-gray-800">About Our Institution</h2>
+              <p className="text-gray-600 mb-4">
+                Founded with a vision to create skilled and compassionate nursing professionals, our college has been at
+                the forefront of nursing education for over two decades. We provide a comprehensive learning environment
+                with state-of-the-art facilities and experienced faculty.
+              </p>
+              <p className="text-gray-600 mb-6">
+                Our programs are designed to equip students with both theoretical knowledge and practical skills needed
+                to excel in the healthcare industry, with a focus on patient care, medical ethics, and professional
+                development.
+              </p>
+              <Link
+                href="/about"
+                className="text-rose-600 font-medium flex items-center gap-2 hover:text-rose-700 transition-colors"
+              >
+                Learn more about us <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+            <div className="md:w-1/2">
+              <img
+                src="/home/lab.jpg?height=400&width=600"
+                alt="Nursing students in a classroom"
+                className="rounded-lg shadow-lg w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Courses Section */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-gray-800">Our Nursing Programs</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              We offer comprehensive nursing programs designed to prepare students for successful careers in healthcare
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <CourseCard
+              title="General Nursing and Midwifery (GNM)"
+              duration="3 Years"
+              eligibility="10+2 in any stream"
+              description="A comprehensive program focusing on general nursing practices and midwifery skills, preparing students for various healthcare settings."
+              icon={<BookOpen className="h-6 w-6" />}
+            />
+
+            <CourseCard
+              title="Auxiliary Nursing and Midwifery (ANM)"
+              duration="2 Years"
+              eligibility="10+2 in any stream"
+              description="A foundation program that trains students in basic nursing and midwifery skills to serve as auxiliary healthcare providers."
+              icon={<BookOpen className="h-6 w-6" />}
+            />
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/courses"
+              className="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-md font-medium inline-flex items-center gap-2 transition-colors"
+            >
+              View All Courses <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Preview */}
+      <section className="py-16 px-4 bg-white">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-gray-800">Campus Gallery</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Take a visual tour of our modern campus facilities and student activities
+            </p>
+          </div>
+
+          <GalleryPreview />
+
+          <div className="text-center mt-10">
+            <Link
+              href="/gallery"
+              className="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-md font-medium inline-flex items-center gap-2 transition-colors"
+            >
+              View Full Gallery <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Location Section */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-gray-800">Our Location</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">
+              Visit our campus to learn more about our programs and facilities
+            </p>
+          </div>
+
+          <div className="rounded-lg overflow-hidden shadow-lg">
+            <MapLocation />
+          </div>
+
+          <div className="mt-8 bg-white p-6 rounded-lg shadow-md">
+            <div className="flex items-start gap-4">
+              <MapPin className="h-6 w-6 text-rose-600 mt-1 flex-shrink-0" />
+              <div>
+                <h3 className="font-semibold text-lg mb-2">College Address</h3>
+                <p className="text-gray-600">
+                  Mother Teresa College Of Nursing,
+                  <br />
+                  Behind Bus Stand, Vyankatesh Colony,
+                  <br />
+                  Washim-444505
+                  <br />
+                  <Link href="tel:+919881211913" className="text-rose-600 hover:text-rose-700">
+                    Phone: 9881211913
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
 }
