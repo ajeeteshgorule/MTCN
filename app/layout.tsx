@@ -66,9 +66,6 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Usercentrics CMP */}
-        <Script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="NpjHznyhvpr51T" async strategy="afterInteractive" />
-
         <Navigation />
         {children}
         <Footer />

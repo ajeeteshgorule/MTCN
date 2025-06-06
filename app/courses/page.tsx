@@ -71,7 +71,7 @@ export default function CoursesPage() {
                         <br />
                         ‣ Maharastra State Board Of Nursing & Para Medical Education
                         <br />
-                        ‣ State Government Of Maharashtra 
+                        ‣ State Government Of Maharashtra
                         <br />
                         ‣ Maharashtra Nursing Council
                       </p>
@@ -115,7 +115,7 @@ export default function CoursesPage() {
                 </ul>
 
                 <button className="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-md font-medium transition-colors">
-                  Apply Now
+                  <a href="/contact">Apply Now</a>
                 </button>
               </div>
             </div>
@@ -216,7 +216,7 @@ export default function CoursesPage() {
                 </ul>
 
                 <button className="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-md font-medium transition-colors">
-                  Apply Now
+                  <a href="/contact">Apply Now</a>
                 </button>
               </div>
             </div>
