@@ -2,28 +2,8 @@
 
 import Link from "next/link"
 import { Mail, MapPin, Phone, Facebook, Twitter, Instagram, Youtube } from "lucide-react"
-import { useState, useEffect } from "react"
 
 export default function Footer() {
-  const [visitCount, setVisitCount] = useState<number | null>(null)
-
-  useEffect(() => {
-    const fetchVisitCount = async () => {
-      try {
-        const response = await fetch("/api/visit-count")
-        const data = await response.json()
-        if (response.ok) {
-          setVisitCount(data.count)
-        } else {
-          console.error("Failed to fetch visit count:", data.error)
-        }
-      } catch (error) {
-        console.error("Error fetching visit count:", error)
-      }
-    }
-    fetchVisitCount()
-  }, [])
- /* from import to here is visit count*/
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto max-w-7xl px-4 py-12">
@@ -129,9 +109,6 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-300">© {new Date().getFullYear()} Mother Teresa College of Nursing Washim. All rights reserved.</p>
-          {visitCount !== null && (
-            <p className="text-gray-300">Total visits: {visitCount}</p>
-          )}
         </div>
       </div>
     </footer>
