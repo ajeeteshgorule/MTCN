@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
 import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
@@ -53,6 +54,17 @@ export default function RootLayout({
         <meta name="google-site-verification" content="jsNZe0CQUet6l5NcHBtX9kbpujicPOjGU8OpPxBnPpY" />
       </head>
       <body className={inter.className}>
+        {/* Google Analytics */}
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-E40HER3RH5" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-E40HER3RH5');
+          `}
+        </Script>
         <Navigation />
         {children}
         <Footer />
