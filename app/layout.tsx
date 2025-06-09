@@ -15,7 +15,23 @@ export const metadata: Metadata = {
   keywords:
     "Mother Teresa College of Nursing, Washim, Nursing College, Nursing Education, Healthcare, ANM, GNM, B.Sc. Nursing, Post Basic B.Sc. Nursing, M.Sc. Nursing, nursing washim, ANM Washim, GNM Washim,Nursing College in Washim,top nursing college in washim, best nursing college in washim, best nursing college in maharashtra, best nursing college in india, best nursing college in maharashtra, best nursing college in india, best nursing college in maharashtra, best nursing college in india",
   icons: {
-    icon: "/favicon.ico", // Path to your favicon
+    icon: "/favicon.ico",
+    shortcut: ["/favicon-16x16.png", "/favicon-32x32.png"],
+    apple: "/apple-touch-icon.png",
+    other: [
+      {
+        rel: "android-chrome-192x192",
+        url: "/android-chrome-192x192.png",
+      },
+      {
+        rel: "android-chrome-512x512",
+        url: "/android-chrome-512x512.png",
+      },
+      {
+        rel: "icon",
+        url: "/icon.png",
+      },
+    ],
   },
   openGraph: {
     title: "Mother Teresa College of Nursing, Washim",
@@ -51,6 +67,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+        <link rel="manifest" href="/site.webmanifest" />
         <meta name="google-site-verification" content="jsNZe0CQUet6l5NcHBtX9kbpujicPOjGU8OpPxBnPpY" />
       </head>
       <body className={inter.className}>
