@@ -172,6 +172,7 @@ export default function GalleryPreview() {
               src={image.url}
               alt={image.title}
               className="w-full h-full object-cover"
+              {...(image.id !== 1 && { loading: "lazy" })}
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
               <h3 className="text-white text-xl font-semibold">{image.title}</h3>
@@ -179,6 +180,17 @@ export default function GalleryPreview() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* View More Button */}
+      <div className="text-center">
+        <Link
+          href="/gallery"
+          className="inline-flex items-center justify-center rounded-full bg-primary-foreground px-6 py-3 text-lg font-semibold text-primary shadow-lg transition-all hover:bg-primary-foreground/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+        >
+          View More
+          <ArrowRight className="ml-2 h-5 w-5" />
+        </Link>
       </div>
     </div>
   )

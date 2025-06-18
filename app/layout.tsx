@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Mother Teresa College of Nursing, Washim, affiliated with the Maharashtra State Board of Nursing and Paramedical Education (MSBNPE), offers excellent GNM and ANM programs. Discover our courses, understand the admission process, and find out why we're considered one of the best nursing colleges in Washim. Start your fulfilling nursing career with us!",
   keywords:
-    "Mother Teresa College of Nursing, Washim, Nursing College, Nursing Education, Healthcare, ANM, GNM, B.Sc. Nursing, Post Basic B.Sc. Nursing, M.Sc. Nursing, nursing washim, ANM Washim, GNM Washim,Nursing College in Washim,top nursing college in washim, best nursing college in washim, best nursing college in maharashtra, best nursing college in india, best nursing college in maharashtra, best nursing college in india, best nursing college in maharashtra, best nursing college in india",
+    "Mother Teresa College of Nursing, Washim, Nursing College, Nursing Education, Healthcare, ANM, GNM, B.Sc. Nursing, Post Basic B.Sc. Nursing, M.Sc. Nursing, nursing washim, ANM Washim, GNM Washim,Nursing College in Washim,top nursing college in washim, best nursing college in washim, best nursing college in maharashtra, best nursing college in india, best nursing college in maharashtra, best nursing college in india, best nursing college in maharashtra, best nursing college in india, nursing college in Washim, best nursing colleges Maharashtra, GNM diploma Washim, ANM nursing course Maharashtra, INC approved nursing college Washim, Maharashtra nursing council college, paramedical courses Washim, nursing admission 2025 Maharashtra, nursing institute near Washim, private nursing college Washim",
   icons: {
     icon: "/favicon.ico",
     shortcut: ["/favicon-16x16.png", "/favicon-32x32.png"],
@@ -70,6 +70,27 @@ export default function RootLayout({
         <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="google-site-verification" content="jsNZe0CQUet6l5NcHBtX9kbpujicPOjGU8OpPxBnPpY" />
+        {/* Schema.org Structured Data of landmark for seo */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "CollegeOrUniversity",
+              "name": "Mother Teresa College of Nursing, Washim",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Behind Bus Stand, Vyankatesh Colony",
+                "addressLocality": "Washim",
+                "addressRegion": "MH",
+                "postalCode": "444505",
+                "addressCountry": "IN"
+              },
+              "telephone": "+919881211913",
+              "url": "https://mtcnwashim.com/"
+            })
+          }}
+        />
       </head>
       <body className={inter.className}>
         {/* Google Analytics */}

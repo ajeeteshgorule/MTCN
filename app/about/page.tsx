@@ -221,7 +221,7 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <img
-                src="/about/principal.png?height=200&width=200"
+                src="/about/principal.webp?height=200&width=200"
                 alt="Principal"
                 className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
               />
@@ -234,7 +234,7 @@ export default function AboutPage() {
 
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <img
-                src="/about/vp.jpeg?height=200&width=200"
+                src="/about/vp.webp?height=200&width=200"
                 alt="Vice Principal"
                 className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
               />
@@ -325,7 +325,7 @@ export default function AboutPage() {
 
             <div className="relative">
               <img
-                src="/about/lab.jpg?height=400&width=500"
+                src="/about/lab.webp?height=400&width=500"
                 alt="College facilities"
                 className="rounded-lg shadow-lg w-full h-auto"
               />

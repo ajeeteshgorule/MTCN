@@ -200,6 +200,7 @@ export default function GalleryPage() {
                 src={image.url}
                 alt={image.title}
                 className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300"
+                {...(image.id !== 1 && { loading: "lazy" })}
               />
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="flex items-center justify-center h-full">
@@ -226,6 +227,7 @@ export default function GalleryPage() {
               src={temporaryImages.find((img) => img.id === selectedImage)?.url}
               alt={temporaryImages.find((img) => img.id === selectedImage)?.title}
               className="max-w-full max-h-[90vh] object-contain"
+              {...(selectedImage !== 1 && { loading: "lazy" })}
             />
           </div>
         )}
