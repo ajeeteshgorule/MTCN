@@ -33,3 +33,18 @@ export default function PricingPage() {
     };
     return <><JsonLd data={jsonLdData}/><Pricing /></>;
 }
+
+
+//this is json ld
+
+import React from 'react';
+import Script from 'next/script';
+
+export default function JsonLd({ data }) {
+  return (
+    <Script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
