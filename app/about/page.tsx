@@ -1,8 +1,67 @@
 import { Award, Users, BookOpen, Heart, Target, Eye, CheckCircle, GraduationCap } from "lucide-react"
+import type { Metadata } from "next"
+import Script from "next/script"
+
+export const metadata: Metadata = {
+  title: "About Us - Mother Teresa College of Nursing, Washim | MTCN Washim",
+  description: "Learn about Mother Teresa College of Nursing, established in 2011 in Washim, Maharashtra. Our vision, mission, expert faculty, leadership team, world-class facilities, and commitment to quality nursing education. INC and Maharashtra Nursing Council approved.",
+  keywords: "About MTCN Washim, Mother Teresa College of Nursing history, nursing college Washim, INC approved nursing college, Maharashtra nursing education, nursing college facilities Washim, MTCN faculty, nursing college leadership team, best nursing college Maharashtra",
+  openGraph: {
+    title: "About Mother Teresa College of Nursing, Washim",
+    description: "Discover our 15+ years of excellence in nursing education. INC approved institution with expert faculty and world-class facilities.",
+    url: "https://mtcnwashim.com/about",
+    siteName: "Mother Teresa College of Nursing",
+    type: "website",
+  },
+}
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <>
+      {/* AboutPage Schema */}
+      <Script id="about-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          "name": "About Mother Teresa College of Nursing",
+          "description": "Learn about Mother Teresa College of Nursing, established in 2011 in Washim, Maharashtra. Our vision, mission, leadership team, and commitment to quality nursing education.",
+          "url": "https://mtcnwashim.com/about",
+          "mainEntity": {
+            "@type": "CollegeOrUniversity",
+            "name": "Mother Teresa College of Nursing",
+            "alternateName": ["MTCN Washim", "Mother Teresa College of Nursing washim"],
+            "foundingDate": "2011",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Behind Bus Stand, Vyankatesh Colony",
+              "addressLocality": "Washim",
+              "addressRegion": "Maharashtra",
+              "postalCode": "444505",
+              "addressCountry": "India"
+            },
+            "founder": {
+              "@type": "Organization",
+              "name": "Mother Teresa Educational Trust"
+            },
+            "description": "INC and Maharashtra Nursing Council approved nursing college offering GNM, ANM, and B.Sc. Nursing programs",
+            "telephone": "+919881211913",
+            "email": "mtcn.washim@gmail.com",
+            "numberOfStudents": 1500,
+            "department": [
+              {
+                "@type": "Organization",
+                "name": "General Nursing and Midwifery Department"
+              },
+              {
+                "@type": "Organization",
+                "name": "Auxiliary Nursing and Midwifery Department"
+              }
+            ]
+          }
+        })}
+      </Script>
+      
+      <main className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="bg-rose-600 text-white py-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -410,5 +469,6 @@ export default function AboutPage() {
         </div>
       </section>
     </main>
+    </>
   )
 }

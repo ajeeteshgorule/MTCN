@@ -1,4 +1,5 @@
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
 
-Sitemap: https://mtcnwashim.com/sitemap.xml 
+Sitemap: https://mtcnwashim.com/sitemap.xml

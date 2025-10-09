@@ -1,9 +1,71 @@
 import { Mail, MapPin, Phone } from "lucide-react"
 import MapLocation from "@/components/map-location"
+import type { Metadata } from "next"
+import Script from "next/script"
+
+export const metadata: Metadata = {
+  title: "Contact Us - Mother Teresa College of Nursing, Washim | Admission Enquiry",
+  description: "Contact Mother Teresa College of Nursing, Washim for admissions inquiries, campus visits, and general information. Call +919881211913 or email mtcn.washim@gmail.com. Visit us at Behind Bus Stand, Vyankatesh Colony, Washim-444505.",
+  keywords: "Contact MTCN Washim, nursing college admission Washim, MTCN contact number, nursing college Washim address, admission enquiry nursing, MTCN email, Mother Teresa College contact, nursing admission helpline",
+  openGraph: {
+    title: "Contact Mother Teresa College of Nursing, Washim",
+    description: "Get in touch for admissions inquiries and campus visits. Call +919881211913 or visit us in Washim, Maharashtra.",
+    url: "https://mtcnwashim.com/contact",
+    siteName: "Mother Teresa College of Nursing",
+    type: "website",
+  },
+}
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <>
+      {/* ContactPage Schema */}
+      <Script id="contact-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Contact Mother Teresa College of Nursing",
+          "description": "Get in touch with Mother Teresa College of Nursing for admissions inquiries, campus visits, or general information",
+          "url": "https://mtcnwashim.com/contact",
+          "mainEntity": {
+            "@type": "CollegeOrUniversity",
+            "name": "Mother Teresa College of Nursing",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Behind Bus Stand, Vyankatesh Colony",
+              "addressLocality": "Washim",
+              "addressRegion": "Maharashtra",
+              "postalCode": "444505",
+              "addressCountry": "India"
+            },
+            "telephone": "+919881211913",
+            "email": "mtcn.washim@gmail.com",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+919881211913",
+              "contactType": "Admissions",
+              "areaServed": "IN",
+              "availableLanguage": ["English", "Hindi", "Marathi"]
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "17:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "09:00",
+                "closes": "13:00"
+              }
+            ]
+          }
+        })}
+      </Script>
+      
+      <main className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-rose-600 text-white py-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -102,5 +164,6 @@ export default function ContactPage() {
 
 
     </main>
+    </>
   )
 }

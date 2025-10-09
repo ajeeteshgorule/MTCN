@@ -4,6 +4,20 @@ import HeroSlider from "@/components/hero-slider"
 import CourseCard from "@/components/course-card"
 import GalleryPreview from "@/components/gallery-preview"
 import MapLocation from "@/components/map-location"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Mother Teresa College of Nursing, Washim | Best Nursing College in Maharashtra",
+  description: "Mother Teresa College of Nursing, Washim - Premier INC and Maharashtra Nursing Council approved nursing college. Offering GNM, ANM, B.Sc. Nursing programs since 2011. 100% placement assistance. Expert faculty, modern facilities. Admissions open for 2025.",
+  keywords: "Mother Teresa College of Nursing Washim, MTCN Washim, best nursing college Washim, nursing college Maharashtra, GNM college Washim, ANM college Washim, INC approved nursing, nursing admission 2025, top nursing college India",
+  openGraph: {
+    title: "Mother Teresa College of Nursing, Washim | Best Nursing College",
+    description: "Premier nursing college in Washim offering INC approved GNM, ANM, and B.Sc. Nursing programs with 100% placement.",
+    url: "https://mtcnwashim.com/",
+    siteName: "Mother Teresa College of Nursing",
+    type: "website",
+  },
+}
 
 export default function Home() {
   return (

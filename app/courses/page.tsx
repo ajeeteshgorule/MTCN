@@ -1,8 +1,95 @@
 import { Clock, GraduationCap, Users, Award, Stethoscope } from "lucide-react"
+import type { Metadata } from "next"
+import Script from "next/script"
+
+export const metadata: Metadata = {
+  title: "Nursing Courses - GNM & ANM Programs | Mother Teresa College Washim",
+  description: "Explore comprehensive nursing programs at MTCN Washim. Offering GNM (3 years), ANM (2 years) and B.Sc. Nursing courses. INC approved programs with 100% placement. Admissions open for 2025. 70 seats GNM, 40 seats ANM.",
+  keywords: "GNM course Washim, ANM course Washim, B.Sc Nursing Washim, nursing diploma Washim, GNM admission 2025, ANM admission Maharashtra, nursing courses Washim, INC approved nursing program, General Nursing Midwifery, Auxiliary Nursing Midwifery",
+  openGraph: {
+    title: "Nursing Courses - GNM & ANM | MTCN Washim",
+    description: "INC approved nursing programs with excellent placement. GNM (3 years), ANM (2 years). Admissions open 2025.",
+    url: "https://mtcnwashim.com/courses",
+    siteName: "Mother Teresa College of Nursing",
+    type: "website",
+  },
+}
 
 export default function CoursesPage() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <>
+      {/* CoursePage Schema */}
+      <Script id="courses-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Nursing Courses at Mother Teresa College of Nursing",
+          "description": "Comprehensive nursing education programs at MTCN Washim",
+          "url": "https://mtcnwashim.com/courses",
+          "itemListElement": [
+            {
+              "@type": "Course",
+              "name": "General Nursing and Midwifery (GNM)",
+              "description": "3-year diploma course in nursing covering fundamentals, medical-surgical nursing, community health, pediatric nursing, and mental health nursing",
+              "provider": {
+                "@type": "CollegeOrUniversity",
+                "name": "Mother Teresa College of Nursing",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Washim",
+                  "addressRegion": "Maharashtra",
+                  "addressCountry": "India"
+                }
+              },
+              "offers": {
+                "@type": "Offer",
+                "category": "Diploma",
+                "availability": "https://schema.org/InStock"
+              },
+              "hasCourseInstance": {
+                "@type": "CourseInstance",
+                "courseMode": "Full-time",
+                "duration": "P3Y",
+                "inLanguage": "en"
+              },
+              "educationalCredentialAwarded": "Diploma in General Nursing and Midwifery",
+              "numberOfCredits": 70,
+              "occupationalCredentialAwarded": "Registered Nurse"
+            },
+            {
+              "@type": "Course",
+              "name": "Auxiliary Nursing and Midwifery (ANM)",
+              "description": "2-year diploma course focusing on basic nursing skills, maternal and child health care, community health, and preventive medicine",
+              "provider": {
+                "@type": "CollegeOrUniversity",
+                "name": "Mother Teresa College of Nursing",
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Washim",
+                  "addressRegion": "Maharashtra",
+                  "addressCountry": "India"
+                }
+              },
+              "offers": {
+                "@type": "Offer",
+                "category": "Diploma",
+                "availability": "https://schema.org/InStock"
+              },
+              "hasCourseInstance": {
+                "@type": "CourseInstance",
+                "courseMode": "Full-time",
+                "duration": "P2Y",
+                "inLanguage": "en"
+              },
+              "educationalCredentialAwarded": "Diploma in Auxiliary Nursing and Midwifery",
+              "numberOfCredits": 40,
+              "occupationalCredentialAwarded": "Auxiliary Nurse Midwife"
+            }
+          ]
+        })}
+      </Script>
+      
+      <main className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-rose-600 text-white py-16 px-4">
         <div className="container mx-auto max-w-6xl">
@@ -224,5 +311,6 @@ export default function CoursesPage() {
         </div>
       </section>
     </main>
+    </>
   )
 }
