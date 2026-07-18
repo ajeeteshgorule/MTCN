@@ -72,7 +72,7 @@ export default function Home() {
             </div>
             <div className="md:w-1/2">
               <img
-                src="/home/lab.jpg?height=400&width=600"
+                src="/gallery/23.jpeg?height=400&width=600"
                 alt="Nursing students in a classroom"
                 className="rounded-lg shadow-lg w-full h-auto"
               />
@@ -100,13 +100,13 @@ export default function Home() {
               icon={<BookOpen className="h-6 w-6" />}
             />
 
-            <CourseCard
+            {/* <CourseCard
               title="Auxiliary Nursing and Midwifery (ANM)"
               duration="2 Years"
               eligibility="10+2 in any stream"
               description="A foundation program that trains students in basic nursing and midwifery skills to serve as auxiliary healthcare providers."
               icon={<BookOpen className="h-6 w-6" />}
-            />
+            /> */}
           </div>
 
           <div className="text-center mt-10">

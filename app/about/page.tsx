@@ -86,7 +86,7 @@ export default function AboutPage() {
                 region.
               </p>
               <p className="text-gray-600 mb-4">
-                Our college is recognized by the State Government Of Maharashtra and affiliated with the Indian Nursing Council, Maharastra State Board Of Nursing & Para Medical Education,Maharashtra Nursing Council.
+                Our college is recognized by the State Government Of Maharashtra and affiliated with the Maharastra State Board Of Nursing & Para Medical Education,Maharashtra Nursing Council.
                 We are committed to providing quality education that combines theoretical knowledge with practical
                 skills, ensuring our graduates are well-prepared for the challenges of modern healthcare.
               </p>
@@ -97,8 +97,8 @@ export default function AboutPage() {
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-4 bg-rose-50 rounded-lg">
-                  <div className="text-2xl font-bold text-rose-600 mb-1">1500+</div>
-                  <div className="text-sm text-gray-600">Graduates</div>
+                  <div className="text-2xl font-bold text-rose-600 mb-1">1000+</div>
+                  <div className="text-sm text-gray-600">Diploma Holders</div>
                 </div>
                 <div className="text-center p-4 bg-rose-50 rounded-lg">
                   <div className="text-2xl font-bold text-rose-600 mb-1">15+</div>
@@ -112,17 +112,17 @@ export default function AboutPage() {
                 alt="College building and students"
                 className="rounded-lg shadow-lg w-full h-auto"
               />
-              <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg">
+              {/* <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-rose-100 rounded-full flex items-center justify-center">
                     <Award className="h-6 w-6 text-rose-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-800">INC Recognized</div>
+                    <div className="font-semibold text-gray-800">MSBNPE Recognized</div>
                     <div className="text-sm text-gray-600">Quality Assured</div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -284,14 +284,14 @@ export default function AboutPage() {
                 alt="Principal"
                 className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
               />
-              <h3 className="font-bold text-lg mb-1 text-gray-800">prof. Sachin Thorat</h3>
+              <h3 className="font-bold text-lg mb-1 text-gray-800">Mr. Ravi Bhalerao</h3>
               <p className="text-rose-600 font-medium mb-2">Principal</p>
               <p className="text-gray-600 text-sm">
-              M.Sc. in Community Health Nursing Education, 15+ years of experience in nursing education and administration.
+              B.Sc.Nursing, 7+ years of experience in nursing education and administration.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md text-center">
+            {/* <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <img
                 src="/about/vp.webp?height=200&width=200"
                 alt="Vice Principal"
@@ -302,7 +302,7 @@ export default function AboutPage() {
               <p className="text-gray-600 text-sm">
               M.Sc. Nursing, Specialist in Medical-Surgical Nursing with a strong background in clinical care and academic leadership.
               </p>
-            </div>
+            </div> */}
 
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <img
@@ -400,7 +400,7 @@ export default function AboutPage() {
       </section>
 
       {/* Achievements & Recognition */}
-      <section className="py-16 px-4 bg-gray-50">
+      {/* <section className="py-16 px-4 bg-gray-50">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4 text-gray-800">Achievements & Recognition</h2>
@@ -443,7 +443,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
       <section className="py-16 px-4 bg-rose-600 text-white">

@@ -71,11 +71,11 @@ export default function Footer() {
                   General Nursing & Midwifery (GNM)
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/courses" className="text-gray-300 hover:text-white transition-colors">
                   Auxiliary Nursing & Midwifery (ANM)
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 

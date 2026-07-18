@@ -154,8 +154,6 @@ export default function CoursesPage() {
                     <div>
                       <p className="text-sm text-gray-500">Recognition</p>
                       <p className="font-medium">
-                        ‣ Indian Nursing Council
-                        <br />
                         ‣ Maharastra State Board Of Nursing & Para Medical Education
                         <br />
                         ‣ State Government Of Maharashtra
@@ -211,7 +209,7 @@ export default function CoursesPage() {
       </section>
 
       {/* ANM Course */}
-      <section className="py-16 px-4 bg-white">
+      {/* <section className="py-16 px-4 bg-white">
         <div className="container mx-auto max-w-6xl">
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <div className="md:flex flex-row-reverse">
@@ -309,7 +307,7 @@ export default function CoursesPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </main>
     </>
   )

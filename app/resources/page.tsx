@@ -77,7 +77,7 @@ export default function ResourcesPage() {
                       onClick={() => setSelectedPDF(pdf.url)}
                       className="text-rose-600 hover:text-rose-700 text-sm font-medium"
                     >
-                      View PDF
+                      {/* View PDF */}
                     </button>
                     {/*<a
                       href={pdf.url}
