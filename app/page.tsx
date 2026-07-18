@@ -72,7 +72,7 @@ export default function Home() {
             </div>
             <div className="md:w-1/2">
               <img
-                src="/gallery/23.jpeg?height=400&width=600"
+                src="/courses/anm.jpg?height=400&width=600"
                 alt="Nursing students in a classroom"
                 className="rounded-lg shadow-lg w-full h-auto"
               />
